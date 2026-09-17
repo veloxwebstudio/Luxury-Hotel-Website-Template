@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking Request · Aurelia Bay Resort</title>
+<meta name="description" content="Send a reservation request to Aurelia Bay Resort using this frontend-only booking UI.">
+<meta property="og:title" content="Booking Request · Aurelia Bay Resort">
+<meta property="og:description" content="Send a reservation request to Aurelia Bay Resort using this frontend-only booking UI.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=2200&q=85">
+<meta name="theme-color" content="#123b3f">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header" id="siteHeader">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Aurelia Bay Resort home"><span class="brand-mark">A</span><span><strong>Aurelia Bay</strong><small>RESORT &amp; SPA</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation"><a class="nav-link " href="index.html">Home</a>
+<a class="nav-link " href="rooms.html">Rooms</a>
+<a class="nav-link " href="dining.html">Dining</a>
+<a class="nav-link " href="gallery.html">Gallery</a>
+<a class="nav-link " href="about.html">About</a>
+<a class="nav-link " href="amenities.html">Amenities</a>
+<a class="nav-link " href="offers.html">Offers</a>
+<a class="nav-link " href="blog.html">Blog</a>
+<a class="nav-link " href="contact.html">Contact</a>
+<a class="nav-link is-active" href="booking.html">Book Now</a></nav>
+    <a class="header-cta" href="booking.html">Reserve <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main id="main-content">
+<section class="page-hero" style="--hero-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80')"><div class="container page-hero-content"><p class="eyebrow reveal">Your stay, your way</p><h1 class="display reveal">Booking request</h1><p class="hero-copy reveal">A polished reservation interface for a hotel website. Demo only — no live availability, payment or booking engine.</p></div></section>
+<section class="section"><div class="container booking-layout"><div class="form-card"><p class="eyebrow">Guest details</p><form data-booking-form><div class="form-grid"><div class="field"><label for="gname">Guest name</label><input id="gname" name="guestname" required autocomplete="name"></div><div class="field"><label for="gemail">Email</label><input id="gemail" name="email" type="email" required autocomplete="email"></div><div class="field"><label for="gphone">Phone</label><input id="gphone" name="phone" type="tel" required autocomplete="tel"></div><div class="field"><label for="room">Room</label><select id="room" name="room" required><option value="Ocean View Suite">Ocean View Suite — $340/night</option><option value="Garden King">Garden King — $245/night</option><option value="Lagoon Pool Villa">Lagoon Pool Villa — $420/night</option><option value="Family Residence">Family Residence — $395/night</option></select></div><div class="field"><label for="bci">Check-in</label><input id="bci" type="date" name="checkin" required></div><div class="field"><label for="bco">Check-out</label><input id="bco" type="date" name="checkout" required></div><div class="field"><label for="bad">Adults</label><select id="bad" name="adults"><option>2</option><option>1</option><option>3</option><option>4</option></select></div><div class="field"><label for="bch">Children</label><select id="bch" name="children"><option>0</option><option>1</option><option>2</option><option>3</option></select></div><div class="field full"><label for="requests">Special requests</label><textarea id="requests" name="requests" placeholder="Late arrival, dietary notes, airport transfer, celebration…"></textarea></div></div><div class="form-actions"><button class="btn btn-gold" type="submit">Send demo request</button><span class="helper">No payment. No live reservation created.</span></div></form></div><aside class="summary-card"><p class="eyebrow">Your request</p><h2 style="font-family:Georgia,serif;font-size:2.25rem;font-weight:500;margin:0 0 10px">Stay summary</h2><div class="summary-row"><span>Room</span><strong data-summary-room>Ocean View Suite — $340/night</strong></div><div class="summary-row"><span>Check-in</span><strong data-summary-checkin>—</strong></div><div class="summary-row"><span>Check-out</span><strong data-summary-checkout>—</strong></div><div class="summary-row"><span>Guests</span><strong data-summary-guests>2 adults · 0 children</strong></div><div class="summary-total"><span>Estimate</span><span>Demo</span></div><p style="color:rgba(255,255,255,.65);font-size:.75rem;margin-top:16px">In a production build, calculate nights/rates here and connect the submission to your reservation workflow.</p></aside></div></section><div class="modal" data-booking-modal role="dialog" aria-modal="true" aria-labelledby="bookingConfirmTitle"><div class="modal-card"><div class="modal-icon">✓</div><p class="eyebrow" style="margin-top:18px">Request received</p><h2 id="bookingConfirmTitle" style="font-family:Georgia,serif;font-size:2.4rem;font-weight:500;line-height:1.05;margin:0 0 10px">Your demo request is ready.</h2><p class="muted">This template intentionally stops here. Connect the form to email, a CRM or a real reservation backend for production use.</p><button class="btn" data-modal-close type="button" style="margin-top:10px">Close</button></div></div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark">A</span><span><strong>Aurelia Bay</strong><small>RESORT &amp; SPA</small></span></a>
+      <p class="footer-lead">A secluded coastal retreat where considered design, warm hospitality and the rhythm of the sea create a slower kind of luxury.</p>
+      <div class="socials" aria-label="Social media">
+        <a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Pinterest">p</a><a href="#" aria-label="X">x</a>
+      </div>
+    </div>
+    <div><h3>Explore</h3><a href="rooms.html">Rooms &amp; Suites</a><a href="dining.html">Dining</a><a href="amenities.html">Amenities</a><a href="gallery.html">Gallery</a></div>
+    <div><h3>Hotel</h3><a href="about.html">Our Story</a><a href="offers.html">Special Offers</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a></div>
+    <div><h3>Stay in touch</h3><p class="footer-contact">42 Ocean Crescent<br>Mirissa, Southern Coast<br>Sri Lanka</p><a href="tel:+94912345678">+94 91 234 5678</a><a href="mailto:stay@aureliabay.example">stay@aureliabay.example</a><form class="mini-newsletter" data-newsletter><label class="sr-only" for="footerEmail">Email address</label><input id="footerEmail" type="email" placeholder="Your email" required><button type="submit" aria-label="Subscribe">→</button></form><p class="form-status" aria-live="polite"></p></div>
+  </div>
+  <div class="container footer-bottom"><span>© <span data-year></span> Aurelia Bay Resort. Demo template.</span><span>Frontend-only HTML template · No live reservations or payments</span></div>
+</footer>
+<button class="back-top" type="button" aria-label="Back to top">↑</button>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="js/script.js" defer></script>
+</body>
+</html>
